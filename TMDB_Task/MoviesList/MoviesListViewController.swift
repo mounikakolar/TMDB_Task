@@ -12,7 +12,11 @@ class MoviesListViewController: UIViewController, UITableViewDelegate, UITableVi
 
    private let viewModel = MoviesListViewModel()
 
-   @IBOutlet weak var moviesListTableView: UITableView!
+   @IBOutlet weak var moviesListTableView: UITableView! {
+      didSet {
+         self.moviesListTableView.tableFooterView = UIView()
+      }
+   }
    @IBOutlet weak var searchBar: UISearchBar!
 
 
